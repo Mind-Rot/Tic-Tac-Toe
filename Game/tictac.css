@@ -1,0 +1,79 @@
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f2f2f2;
+	margin: 0;
+}
+
+#game {
+	max-width: 400px;
+	margin: 0 auto;
+	padding: 20px;
+	background-color: #fff;
+	border-radius: 5px;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.board {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 10px;
+	margin-bottom: 20px;
+}
+
+.square {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 80px;
+	font-size: 3rem;
+	color: #555;
+	background-color: #ddd;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease-in-out;
+}
+
+.square:hover {
+	background-color: #ccc;
+}
+
+.square::after {
+	content: '';
+	display: block;
+	padding-bottom: 100%;
+}
+
+#status {
+	font-size: 1.2rem;
+	margin-bottom: 10px;
+}
+
+.game-over .square {
+	cursor: default;
+}
+
+.game-over .square:hover {
+	background-color: #ddd;
+}
+
+button {
+	display: block;
+	margin: 0 auto;
+	padding: 10px 20px;
+	font-size: 1rem;
+	color: #fff;
+	background-color: #007bff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+	background-color: #0069d9;
+}
+
+.score {
+  display: flex;
+  align-items: center;
+}
